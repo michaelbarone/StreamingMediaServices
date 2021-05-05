@@ -1,0 +1,6 @@
+*.db
+*.log
+CASconfig.php
+CASlogout.php
+web.config
+upload/*

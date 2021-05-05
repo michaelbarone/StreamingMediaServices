@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>Strobe Media Playback</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <script type="text/javascript" src="lib/swfobject.js"></script>
+        <script type="text/javascript" src="lib/ParsedQueryString.js"></script>
+        <script type="text/javascript">
+            
+            // Collect query parameters in an object that we can
+            // forward to SWFObject:
+  
+            var pqs = new ParsedQueryString();
+            var parameterNames = pqs.params(false);
+            var parameters = {};
+            
+            for (var i = 0; i < parameterNames.length; i++) {
+                var parameterName = parameterNames[i];
+                parameters[parameterName] = pqs.param(parameterName) ||
+                parameters[parameterName];
+            }
+            
+       	    var wmodeValue = "direct";
+            var wmodeOptions = ["direct", "opaque", "transparent", "window"];
+            if (parameters.hasOwnProperty("wmode"))
+            {
+            	if (wmodeOptions.indexOf(parameters.wmode) >= 0)
+            	{
+            		wmodeValue = parameters.wmode;
+            	}	            	
+            	delete parameters.wmode;
+            }
+            
+			var width = window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
+
+			var height = window.innerHeight
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
+			
+            // Embed the player SWF:	            
+            swfobject.embedSWF(
+				"StrobeMediaPlayback.swf"
+				, "StrobeMediaPlayback"
+				, width
+				, height
+				, "10.1.0"
+				, "expressInstall.swf"
+				, parameters
+				, {
+	                allowFullScreen: "true",
+	                wmode: wmodeValue
+	            }
+				, {
+	                name: "StrobeMediaPlayback"
+	            }
+			);
+        </script>
+        <style type="text/css">
+			body,html,#StrobeMediaPlayback { margin:0;min-height:100%;height:100%;width:100%;position:absolute; }
+        </style>
+    </head>
+    <body>
+		<div id="StrobeMediaPlayback"></div>
+    </body>
+</html>

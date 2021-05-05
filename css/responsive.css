@@ -1,0 +1,141 @@
+/*  Responsive CSS start  */
+
+@media only screen and (max-width: 1350px) {
+    .content {
+        width:100% !important;
+    }
+	#videocontainer {
+		width:711.11px !important;
+	}	
+}
+
+@media only screen and (max-width: 925px) {
+	.needsprocessing {
+		width:auto;
+		float:none;
+		margin: 30px 10px 0 !important;
+	}
+	#uploadarea {
+		width:auto;
+		float:none;
+	}
+	#pageHeader {
+		height:90px;
+	}
+	#pageHeader h1 {
+		line-height:90px;
+		font-size:30px;
+	}
+	#videocontainer {
+		width:657.77px !important;
+	}
+	.col4 {
+		width:50%;
+	}
+	.col3 {
+		width:50%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#videocontainer {
+		width:577.77px !important;
+	}
+	#pageHeader {
+		height:75px;
+	}	
+	#pageHeader h1 {
+		line-height:75px;
+		font-size:25px;
+	}
+	#footer {
+		height:auto !important;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#pageHeader {
+		height:65px;
+	}
+	#pageHeader h1 {
+		line-height:65px;
+		font-size:20px;
+	}
+	#videocontainer {
+		width:480px !important;
+	}	
+	.mobilenavigation {
+		display:block !important;
+		margin-right:-2px;
+	}
+
+	.primary-site-navigation {
+		display:none !important;
+		margin-top:25px !important;
+		border: solid 1px grey;
+		position:absolute;
+		right:8px;
+	}
+
+	.sitenavigation:hover > .primary-site-navigation {
+		display:block !important;
+	}
+	
+	.sitenavigation {
+		background-color: white !important;
+	}
+
+	.sitenavigation li {
+	  display: block !important;
+	  list-style-type: none;
+	  padding: 10px;
+	  margin:0;
+	  text-align:right;
+	  background-color:#eee;
+	}
+
+	.primary-site-navigation-secondary {
+		top: 10px;
+		right: 100px;
+		left: initial;
+		border-top:    solid 1px grey;
+		border-bottom: solid 1px grey;
+		border-left:   solid 1px grey;
+	}
+
+	.videoentry .topbuttons {
+		float:left;
+	}
+	
+	.col4 {
+		width:95%;
+	}
+	.col3 {
+		width:95%;
+	}
+	.col2 {
+		width:95%;
+	}	
+}
+
+@media only screen and (max-width: 500px) {
+	html {
+		background: none !important;
+	}
+    .content {
+		margin:0 !important;
+    }
+	#videocontainer {
+		width:444.44px !important;
+	}
+}
+@media only screen and (max-width: 460px) {
+	#videocontainer {
+		width:373.33px !important;
+	}
+}
+@media only screen and (max-width: 400px) {
+	#videocontainer {
+		width:320px !important;
+	}
+}
